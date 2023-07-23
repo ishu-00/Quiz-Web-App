@@ -22,7 +22,7 @@ body {
     transform: translate(-50%, -50%);
     box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2),
         0px 6px 20px 0 rgba(0, 0, 0, 0.19);
-        transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .start_btn button {
@@ -205,6 +205,14 @@ body {
     user-select: none;
 }
 
+.quiz_box header .time_line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: red;
+}
+
 .quiz_box section {
     padding: 25px 30px 20px 30px;
     background: white;
@@ -258,29 +266,31 @@ section .option_list .option .icon {
     pointer-events: none;
 }
 
-section .option_list .option .tick {
+section .option_list .option .icon.tick {
     color: green;
     border-color: green;
     background: rgb(202, 255, 202);
 }
 
-section .option_list .option .cross {
+section .option_list .option .icon.cross {
     color: rgb(155, 34, 21);
     border-color: rgb(170, 31, 31);
     background: rgb(251, 204, 204);
 }
 
-.option_list .option.correct{
+.option_list .option.correct {
     color: green;
     border-color: green;
     background: rgb(202, 255, 202);
 }
-.option_list .option.incorrect{
+
+.option_list .option.incorrect {
     color: rgb(155, 34, 21);
     border-color: rgb(170, 31, 31);
     background: rgb(251, 204, 204);
 }
-.option_list .option.disabled{
+
+.option_list .option.disabled {
     pointer-events: none;
 }
 
@@ -309,6 +319,7 @@ section .option_list .option .cross {
 }
 
 footer .next_btn {
+    display: none;
     height: 40px;
     padding: 0 13px;
     font-size: 18px;
@@ -345,6 +356,13 @@ footer .next_btn:hover {
     opacity: 0;
     pointer-events: none;
     transform: translate(-50%, -50%) scale(0.9);
+}
+
+.activeResult {
+    z-index: 5;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .result_box .icon {
