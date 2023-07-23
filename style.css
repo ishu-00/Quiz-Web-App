@@ -410,3 +410,15 @@ footer .next_btn:hover {
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
+@media screen and (max-width: 600px ) {
+    .info_box, .quiz_box, .result_box{
+        width: calc((100%) - 50px);
+    }
+    .quiz_box header{
+        height: 100px;
+    }
+    .quiz_box header .time_line{
+     height: 0px;
+    }
+}
